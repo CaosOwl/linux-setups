@@ -1,0 +1,19 @@
+total 72
+drwxr-xr-x. 4 root root 4096 Dec 12  2018 ownCloud
+drwxr-xr-x. 3 root root 4096 Mar 24  2019 ROOT
+drwxr-xr-x. 3 root root 4096 Mar 24  2019 CLHEP
+drwxr-xr-x. 3 root root 4096 Mar 24  2019 CMAKE
+drwxr-xr-x. 5 root root 4096 Mar 24  2019 Coin3D
+drwxr-xr-x. 4 root root 4096 Mar 24  2019 Geant
+drwxr-xr-x. 4 root root 4096 Mar 24  2019 HDFview
+drwxr-xr-x. 3 root root 4096 Mar 24  2019 VeraCrypt
+drwxr-xr-x. 4 root root 4096 Apr 10  2019 cisco
+drwxr-xr-x. 3 root root 4096 Apr 12  2019 en_US.UTF-8:en-us:en
+drwxr-xr-x. 2 root root 4096 Apr 19  2019 MEGA
+drwxr-xr-x. 3 root root 4096 Jul  9  2019 kingsoft
+drwxr-xr-x. 3 root root 4096 Jul  9  2019 HighFive
+drwxr-xr-x. 2 root root 4096 Jul 18  2019 JabRef
+drwxr-xr-x. 3 root root 4096 Aug  7 09:50 Garfield
+drwxr-xr-x. 3 root root 4096 Sep 24 11:04 GSL
+drwxr-xr-x. 3 root root 4096 Sep 24 11:24 HepMC
+drwxr-xr-x. 3 root root 4096 Sep 24 14:08 XercesC
