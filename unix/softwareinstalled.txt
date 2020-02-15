@@ -13,7 +13,7 @@ drwxr-xr-x. 2 root root 4096 Apr 19  2019 MEGA
 drwxr-xr-x. 3 root root 4096 Jul  9  2019 kingsoft
 drwxr-xr-x. 3 root root 4096 Jul  9  2019 HighFive
 drwxr-xr-x. 2 root root 4096 Jul 18  2019 JabRef
-drwxr-xr-x. 3 root root 4096 Aug  7 09:50 Garfield
+drwxr-xr-x. 3 root root 4096 Aug  7  2019 Garfield
 drwxr-xr-x. 3 root root 4096 Sep 24 11:04 GSL
 drwxr-xr-x. 3 root root 4096 Sep 24 11:24 HepMC
 drwxr-xr-x. 3 root root 4096 Sep 24 14:08 XercesC
