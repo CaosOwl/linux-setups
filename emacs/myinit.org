@@ -34,13 +34,27 @@
   gdb-show-main t
   )
   #+END_SRC
-* eshell
+* shell
   #+BEGIN_SRC emacs-lisp
 
 ;;use .basrc of terminal in eshell
 
+;;from protesilaoconfiguration
+(use-package shell
+  :commands shell-command
+  :config
+  (setq ansi-color-for-comint-mode t)
+  (setq shell-command-prompt-show-cwd t)) ; Emacs 27.1
+
 (when (memq window-system '(mac ns x))
 (exec-path-from-shell-initialize))
+
+;;addcolor
+(add-to-list 'comint-output-filter-functions 'ansi-color-process-output)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+
+;;shortcut
+  (global-set-key (kbd "M-s M-s") 'shell)
 
   #+END_SRC
 * speedbar
@@ -243,7 +257,6 @@ TODO: make a personal folder with needed snippets
    #+END_SRC
 ** ivy-posframe
    set properly ivy frame
-
    #+BEGIN_SRC emacs-lisp
 
 (use-package ivy-posframe
