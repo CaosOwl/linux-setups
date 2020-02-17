@@ -75,6 +75,7 @@ alias mymount="sshfs edepero@pcposeth5.dhcp.phys.ethz.ch:/home/edepero/Data/ $HO
 alias unmount="sudo umount $HOME/mountpoint"
 alias sn="systemctl poweroff -i"
 alias rn="shutdown -r 0"
+alias lock="gnome-screensaver-command -l"
 alias pushsync="rsync -A --no-perms -avz -e 'ssh -p $SSHPORT -i $PKEY' --delete --progress /home/deppy/BackupDisk/dhcp-192-033-102-176.ethz.ch $MYSERVER:$SERVERBACKUPDIR"
 alias openserver="systemctl start sshd"
 alias closeserver="systemctl stop sshd"
@@ -89,12 +90,25 @@ alias shownet="echo -e '\033[0;31m LIST OF AVAIABLE CONNECTIONS: \033[m' && sed 
 alias showgit="echo -e '\033[0;31m LIST OF AVAIABLE GIT REPOSITORIES: \033[m' && sed -n '/git/,/#+END/p' $HOME/.setup.org"
 alias showvar="echo -e '\033[0;31m LIST OF ALL DEFINED VARIABLES: \033[m' && sed -n '/variables/,/#+END/p' $HOME/.setup.org"
 alias showcommand="echo -e '\033[0;31m LIST OF ALL DEFINED COMMANDS: \033[m' && sed -n '/commands/,/#+END/p' $HOME/.setup.org"
+alias showfunctions="echo -e '\033[0;31m LIST OF ALL DEFINED FUNCTIONS: \033[m' && sed -n '/function/,/#+END/p' $HOME/.setup.org"
 #+END_SRC
 * function
 #+BEGIN_SRC bash#
+
+#open two files in emacs diff mode
 ediff () { emacs -nw -eval "(ediff-files \"$1\" \"$2\")" ; }
+
 mysinc () { rsync -avze 'ssh -i $PUBKEY -p $SSHPORT' --delete $1 $MYSERVER:/home/caosowl/mountpoint/backups/; }
+
+#extract only part of pdf needed
 pdfextract () { filename=$1 && pdfseparate -f $2 -l $3 $filename "dummy_%d.pdf" && targets=$(eval echo "dummy_"{$2..$3}".pdf") && echo $targets && pdfunite $targets ${filename%.*}"_extract.pdf" && rm $targets; }
+
+#copy using git has as tag plus a custom one
+cptag () { cp -v $1 $2"_$3_"$(git rev-parse HEAD);}
+
+#compress using tar
+tarcompress () { tar -czvf $1 $2;}
+
 #+END_SRC
 * git repository
 #+BEGIN_SRC bash
