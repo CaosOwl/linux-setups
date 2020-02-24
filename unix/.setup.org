@@ -91,6 +91,7 @@ alias showgit="echo -e '\033[0;31m LIST OF AVAIABLE GIT REPOSITORIES: \033[m' &&
 alias showvar="echo -e '\033[0;31m LIST OF ALL DEFINED VARIABLES: \033[m' && sed -n '/variables/,/#+END/p' $HOME/.setup.org"
 alias showcommand="echo -e '\033[0;31m LIST OF ALL DEFINED COMMANDS: \033[m' && sed -n '/commands/,/#+END/p' $HOME/.setup.org"
 alias showfunctions="echo -e '\033[0;31m LIST OF ALL DEFINED FUNCTIONS: \033[m' && sed -n '/function/,/#+END/p' $HOME/.setup.org"
+alias wonderdraft="/opt/Wonderdraft/Wonderdraft-1.1.1.4-Linux64nd/Wonderdraft.x86_64"
 #+END_SRC
 * function
 #+BEGIN_SRC bash#

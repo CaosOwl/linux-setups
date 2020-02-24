@@ -69,20 +69,6 @@
   (global-set-key (kbd "C-x p") 'sr-speedbar-toggle)
   #+END_SRC 
 
-* auctex
-  #+BEGIN_SRC emacs-lisp
-  ;;auctex mode
-  (setq TeX-auto-save t)
-  (setq TeX-parse-self t)
-  (setq-default TeX-master nil)
-  
-  (add-hook 'LaTeX-mode-hook 'visual-line-mode)
-  (add-hook 'LaTeX-mode-hook 'flyspell-mode)
-  (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-  
-  (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-  (setq reftex-plug-into-AUCTeX t)
-  #+END_SRC 
 * org-mode
   #+BEGIN_SRC emacs-lisp
   ;;automatically show immage inline
@@ -138,12 +124,30 @@ TODO: make a personal folder with needed snippets
   :ensure t
   :config
   (use-package yasnippet-snippets
-     :ensure t)
-  (yas-reload-all))
+  :ensure t)
+     (yas-reload-all))
 
   
 
   #+END_SRC
+* Latex
+  #+BEGIN_SRC emacs-lisp
+  ;;auctex mode
+  (setq TeX-auto-save t)
+  (setq TeX-parse-self t)
+  (setq-default TeX-master nil)
+  
+  (add-hook 'LaTeX-mode-hook 'visual-line-mode)
+  (add-hook 'LaTeX-mode-hook 'flyspell-mode)
+  (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+  
+  (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+
+  (setq reftex-plug-into-AUCTeX t)
+
+  ;;add hook for yasnippet
+  ;;(add-hook 'Latex-mode-hook 'yas-minor-mode)
+  #+END_SRC 
 * PDF-tools
   #+BEGIN_SRC emacs-lisp
   ;;pdf-tools tweak
