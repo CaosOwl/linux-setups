@@ -188,11 +188,13 @@
   (setq org-format-latex-options (plist-put org-format-latex-options :scale 3.0))
 
   ;;automatically create latex fragment after saving
-  (defun my/org-render-latex-fragments ()
-  (if (org--list-latex-overlays)
-  (progn (org-toggle-latex-fragment)
-  (org-toggle-latex-fragment))
-  (org-toggle-latex-fragment)))
+  ;;(use-package org-fragtog
+  ;;:ensure t
+  ;;:config
+  ;;manually load the file for now
+  (load-file "~/.emacs.d/org-fragtog/org-fragtog.el")
+  (add-hook 'org-mode-hook 'org-fragtog-mode)
+
   
   (add-hook 'org-mode-hook
   (lambda ()
