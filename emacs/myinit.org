@@ -6,6 +6,21 @@
   ;;(server-start)
 
   #+END_SRC
+* theme
+  #+begin_src emacs-lisp
+
+  ;;my favorite
+  (load-theme 'solarized-dark t)
+  
+  ;;greek guy
+  ;;(use-package modus-operandi-theme
+  ;;:ensure t)
+  
+  ;;(use-package modus-vivendi-theme
+  ;;:ensure t)
+  
+
+  #+end_src
 * emacs variable
   #+BEGIN_SRC emacs-lisp
 
@@ -22,6 +37,9 @@
   ;;move quickly between windows
   (windmove-default-keybindings)
   (setq windmove-wrap-around t)
+
+  ;;maximize screeen after startup
+  (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
   #+END_SRC
 * gdb
