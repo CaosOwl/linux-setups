@@ -110,6 +110,9 @@ cptag () { cp -v $1 $2"_$3_"$(git rev-parse HEAD);}
 #compress using tar
 tarcompress () { tar -czvf $1 $2;}
 
+#decompress tar.gz
+targzdecompress () { tar -xzvf $1; }
+
 #+END_SRC
 # git repository
 #+BEGIN_SRC bash
