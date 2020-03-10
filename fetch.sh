@@ -4,6 +4,7 @@ UNIXLOCATION=/home/deppy
 
 #copy files
 cp -v $EMACSLOCATION/myinit.org emacs/
+cp -v $EMACSLOCATION/init.el emacs/
 cp -v $UNIXLOCATION/.setup.org unix/
 cp -v $UNIXLOCATION/.setup.sh unix/
 cp -v $UNIXLOCATION/.bashrc unix/
