@@ -46,8 +46,9 @@
   (setq ansi-color-for-comint-mode t)
   (setq shell-command-prompt-show-cwd t)) ; Emacs 27.1
 
-(when (memq window-system '(mac ns x))
-(exec-path-from-shell-initialize))
+;;removed due to some clash with newer version
+;;(when (memq window-system '(mac ns x))
+;;(exec-path-from-shell-initialize))
 
 ;;addcolor
 (add-to-list 'comint-output-filter-functions 'ansi-color-process-output)
