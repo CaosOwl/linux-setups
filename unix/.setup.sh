@@ -23,7 +23,9 @@ PRESDIR=/home/deppy/polybox/PhD/presentation
 SKRIPTDIR=/home/deppy/workdir/skripts
 COOLDIR=/home/deppy/workdir/p348-daq/coral/src/coool
 PCPOSETH5=edepero@pcposeth5.dhcp.phys.ethz.ch
-ESSOS=deperoe@essos1.ethz.ch
+ESSOSHOST=deperoe@essos1.ethz.ch
+ESSOSSTORAGE=/mnt/storage/deperoe/visible-mode-2021
+ESSOS=$ESSOSHOST:$ESSOSSTORAGE
 MMCLUSDIR=$ESSOS:/mnt/raid/groups/mm-clustering/data
 DUMP=deperoe@essos2:/mnt/storage/deperoe/backup
 PKEY=/home/deppy/.ssh/serverkey_openssh
@@ -79,7 +81,7 @@ alias lock="gnome-screensaver-command -l"
 alias pushsync="rsync -A --no-perms -avz -e 'ssh -p $SSHPORT -i $PKEY' --delete --progress /home/deppy/BackupDisk/dhcp-192-033-102-176.ethz.ch $MYSERVER:$SERVERBACKUPDIR"
 alias openserver="systemctl start sshd"
 alias closeserver="systemctl stop sshd"
-alias update="sudo dnf update"
+alias update="sudo dnf update -C"
 #softwares command
 alias menus="$SOFTWARES/mensa-menus/menus"
 #commands to work with unify tools
@@ -95,6 +97,9 @@ alias wonderdraft="/opt/Wonderdraft/Wonderdraft-1.1.1.4-Linux64nd/Wonderdraft.x8
 #+END_SRC
 # function
 #+BEGIN_SRC bash#
+
+#start typical program needed in the startup
+myinit () { thunderbird & firefox & emacs & update & nautilus; }
 
 #open two files in emacs diff mode
 ediff () { emacs -nw -eval "(ediff-files \"$1\" \"$2\")" ; }
