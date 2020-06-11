@@ -584,6 +584,23 @@ TODO: make a personal folder with needed snippets
 ;;(add-hook 'elpy-mode-hook 'flycheck-mode))
 
   #+END_SRC 
+* COMMENT Julia
+  #+begin_src emacs-lisp
+
+  ;;CURRENTLY THE MORE SIMPLE ALTERNATIVE IS PREFERRED TO ESS (EMACS SPEAK STATISTCS)
+
+  ;;use julia-repl (main advantage of this simple solution)
+  (add-to-list 'load-path path-to-julia-repl)
+  (require 'julia-repl)
+  (add-hook 'julia-mode-hook 'julia-repl-mode) ;; always use minor mode
+
+  ;;use emacsclient by default
+  (add-hook 'julia-repl-hook #'julia-repl-use-emacsclient)
+
+  ;;maximum number of threads, typically one less than the total avaiable
+  (setenv "JULIA_NUM_THREADS" "3")
+
+  #+end_src
 * Make
   #+BEGIN_SRC emacs-lisp
    
@@ -621,10 +638,10 @@ TODO: make a personal folder with needed snippets
   #+END_SRC
 ** time-machine
    #+BEGIN_SRC emacs-lisp
-;;git time machine
-(use-package git-timemachine
-:ensure t
-)
+   ;;git time machine
+   (use-package git-timemachine
+   :ensure t
+   )
 #+END_SRC
 * wgrep
   #+BEGIN_SRC emacs-lisp
