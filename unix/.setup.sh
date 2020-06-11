@@ -62,6 +62,8 @@ alias pixel="ssh -Y edepero@128.141.148.144"
 alias caen="ssh -Y edepero@128.141.41.240"
 alias wincern="xfreerdp -u edepero -d CERN -g '89%' cernts.cern.ch"
 alias compasspc="xfreerdp -u dcs -d pccompass010 -g '89%' pccompass010.dyndns.cern.ch" #compass pc with slow control
+#hooks to the web digitizer tool
+alias webdigitizer="/opt/WebPlotDigitizer/WebPlotDigitizer-4.2-linux-x64/WebPlotDigitizer-4.2"
 #+END_SRC
 # commands
 #+BEGIN_SRC bash
@@ -81,7 +83,7 @@ alias lock="gnome-screensaver-command -l"
 alias pushsync="rsync -A --no-perms -avz -e 'ssh -p $SSHPORT -i $PKEY' --delete --progress /home/deppy/BackupDisk/dhcp-192-033-102-176.ethz.ch $MYSERVER:$SERVERBACKUPDIR"
 alias openserver="systemctl start sshd"
 alias closeserver="systemctl stop sshd"
-alias update="sudo dnf update -C"
+alias update="sudo dnf update"
 #softwares command
 alias menus="$SOFTWARES/mensa-menus/menus"
 #commands to work with unify tools
@@ -125,24 +127,16 @@ alias clonedaq="git clone https://gitlab.cern.ch/P348/p348-daq.git && cd p348-da
 alias cloneanal="git clone https://gitlab.ethz.ch/XBosonVis/na64analysis"
 #+END_SRC
 # python
-#+BEGIN_SRC bash
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/deppy/.anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/home/deppy/.anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/deppy/.anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/home/deppy/.anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+## Standard python
+   #+begin_src bash
+   
+   alias python="/usr/bin/python3"
+   alias ipython="/usr/bin/ipython"
 
-#+END_SRC
+   #+end_src   
 # julia
 #+BEGIN_SRC bash
-alias julia="/opt/Julia/julia-1.0.2/bin/julia"
+#switched off for now, using standard
 #+END_SRC
 # root
 #+BEGIN_SRC bash
