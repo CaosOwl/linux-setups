@@ -385,6 +385,9 @@ TODO: make a personal folder with needed snippets
   ;;add hook for yasnippet
   (add-hook 'Latex-mode-hook 'yas-minor-mode)
 
+  ;;apply sinctex when compiling the source
+  (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex --synctex=1%(mode)%' %t" TeX-run-TeX nil t))
+
   ;;scale preview 
   (setq preview-scale-function 2)
 
