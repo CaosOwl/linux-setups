@@ -10,7 +10,7 @@ cp -v $UNIXLOCATION/.setup.sh unix/
 cp -v $UNIXLOCATION/.bashrc unix/
 
 #list user installed package
-dnf history userinstalled > unix/packageinstalled.txt
+dnf list installed > unix/packageinstalled.txt
 ls -ltr /opt > unix/softwareinstalled.txt
 
 #compress all emacs file

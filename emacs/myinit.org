@@ -368,7 +368,7 @@ TODO: make a personal folder with needed snippets
   
 
   #+END_SRC
-* Latex`
+* Latex
   #+BEGIN_SRC emacs-lisp
   ;;auctex mode
   (setq TeX-auto-save t)
@@ -385,7 +385,7 @@ TODO: make a personal folder with needed snippets
   ;;add hook for yasnippet
   (add-hook 'Latex-mode-hook 'yas-minor-mode)
 
-  ;;apply sinctex when compiling the source
+  ;;add a command to apply sinctex when compiling the source
   (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex --synctex=1%(mode)%' %t" TeX-run-TeX nil t))
 
   ;;scale preview 
@@ -567,9 +567,9 @@ TODO: make a personal folder with needed snippets
   
   ;; ;; PYTHON CONFIGURATION
   ;; ;; --------------------------------------
-  (setq python-environment-directory "/home/deppy/.anaconda3")
-  (setq py-python-command "/home/deppy/.anaconda3/bin/python")
-  (setq python-shell-interpreter "/home/deppy/.anaconda3/bin/python")
+  ;(setq python-environment-directory "/usr/bin/")
+  (setq py-python-command "/usr/bin/python3")
+  (setq python-shell-interpreter "/usr/bin/ipython")
   (use-package elpy
   :ensure t
   :config 

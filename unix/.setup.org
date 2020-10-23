@@ -9,13 +9,13 @@ UTILITY=~/polybox/PhD/code/c++/utilities
 SIMDIR=/home/deppy/workdir/na64-tools/geant4/simulation/examples
 ORGDIR=/home/deppy/polybox/PhD/org_files
 TEMPLATEDIR=/home/deppy/polybox/PhD/code/c++/templates
-BACKUPDIR=/home/deppy/BackupDisk/Analysis2018
-SAMPLEDIR=/home/deppy/BackupDisk/Analysis2018/sample/2018samples
-TESTDIR=/home/deppy/BackupDisk/Analysis2018/test
+BACKUPDIR=/home/deppy/BackupDisk/AnalysisDir
+SAMPLEDIR=/home/deppy/BackupDisk/AnalysisDir/sample/2018samples
+TESTDIR=/home/deppy/BackupDisk/AnalysisDir/test
 DATA=/run/media/deppy/DATA
-ANAL=/home/deppy/workdir/Analysis2018/na64analysis
+ANAL=/home/deppy/workdir/AnalysisDir/na64analysis
 DEV=/home/deppy/workdir/scratch/p348-daq/p348reco
-RECO=/home/deppy/workdir/Analysis2018/reco-daq/p348reco
+RECO=/home/deppy/workdir/AnalysisDir/reco-daq/p348reco
 SCRATCH=/home/deppy/workdir/scratch
 DM=/home/deppy/workdir/DarkMatter
 NOTEDIR=/home/deppy/polybox/PhD/notes
@@ -68,7 +68,7 @@ alias webdigitizer="/opt/WebPlotDigitizer/WebPlotDigitizer-4.2-linux-x64/WebPlot
 * commands
 #+BEGIN_SRC bash
 alias megasource="source $HOME/.bashrc"
-alias vemacs="emacs -nw -q"
+alias vemacs="emacsclient -nw"
 alias ls='ls -ltr --color=auto'
 alias root='root -l'
 alias megacat="cat ~/.setup.org"
@@ -84,6 +84,8 @@ alias pushsync="rsync -A --no-perms -avz -e 'ssh -p $SSHPORT -i $PKEY' --delete 
 alias openserver="systemctl start sshd"
 alias closeserver="systemctl stop sshd"
 alias update="sudo dnf update"
+alias dobackup="source /home/deppy/.backupbox-phys/restic-env && restic backup && restic snapshot"
+alias startcool="$RECO/../coral/src/coool/src/coool -map $RECO/../maps -group $RECO/../coral/src/coool/monitor/groups.xlm -geom $RECO/../coral/src/coool/lstrack/detectors.dat"
 #softwares command
 alias menus="$SOFTWARES/mensa-menus/menus"
 #commands to work with unify tools

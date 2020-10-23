@@ -15,8 +15,8 @@ drwxr-xr-x.  2 root root 4096 Jul 18  2019 JabRef
 drwxr-xr-x.  3 root root 4096 Sep 24  2019 GSL
 drwxr-xr-x.  3 root root 4096 Sep 24  2019 HepMC
 drwxr-xr-x.  3 root root 4096 Sep 24  2019 XercesC
-drwxr-xr-x.  4 root root 4096 Feb 15 22:29 Garfield
-drwxr-xr-x.  4 root root 4096 Feb 17 10:01 cisco
-drwxr-xr-x.  3 root root 4096 Feb 23 17:30 Wonderdraft
+drwxr-xr-x.  4 root root 4096 Feb 15  2020 Garfield
+drwxr-xr-x.  4 root root 4096 Feb 17  2020 cisco
+drwxr-xr-x.  3 root root 4096 Feb 23  2020 Wonderdraft
 drwxr-xr-x. 22 root root 4096 May 12 15:55 zoom
 drwxr-xr-x.  3 root root 4096 Jun 11 10:24 WebPlotDigitizer
