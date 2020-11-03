@@ -28,10 +28,10 @@ ESSOSSTORAGE=/mnt/storage/deperoe/visible-mode-2021
 ESSOS=$ESSOSHOST:$ESSOSSTORAGE
 MMCLUSDIR=$ESSOS:/mnt/raid/groups/mm-clustering/data
 DUMP=deperoe@essos2:/mnt/storage/deperoe/backup
-PKEY=/home/deppy/.ssh/serverkey_openssh
-SSHPORT=6674
+PKEY=~/.ssh/serverkey_caosowl
+SSHPORT=6626
 MYSERVER=caosowl@akashas.ddns.net
-SERVERBACKUPDIR=/home/caosowl/mountpoint/backups/backup
+SERVERBACKUPDIR=/mnt/data
 NOTES=/home/deppy/workdir/na64-papers
 #SOFTWARE DIRECTORIES
 GEANTDIR=/opt/Geant/geant4.10.05
