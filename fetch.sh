@@ -1,6 +1,5 @@
 #LOCATIONS
-EMACSLOCATION=/home/deppy/.emacs.d
-UNIXLOCATION=/home/deppy
+source globals.cfg
 
 #copy files
 cp -v $EMACSLOCATION/myinit.org emacs/
