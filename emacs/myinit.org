@@ -228,40 +228,44 @@
    #+end_src
 * org-mode
   #+BEGIN_SRC emacs-lisp
-  ;;automatically show immage inline
-  (setq org-startup-with-inline-images t)
-  
-  ;;automatic size of inline image
-  (setq org-image-actual-width 400)
 
-  ;;load bullet points
-  (use-package org-bullets
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+	;;fold automatically org at opening
+        (setq org-startup-folded t)
 
-  ;;make formula in latex larger
-  (setq org-format-latex-options (plist-put org-format-latex-options :scale 3.0))
+	;;automatically show immage inline
+	(setq org-startup-with-inline-images t)
 
-  ;;automatically create latex fragment after saving
-  ;;(use-package org-fragtog
-  ;;:ensure t
-  ;;:config
-  ;;manually load the file for now
-  (load-file "~/.emacs.d/org-fragtog/org-fragtog.el")
-  (add-hook 'org-mode-hook 'org-fragtog-mode)
+	;;automatic size of inline image
+	(setq org-image-actual-width 400)
 
-  
-  ;;THIS RENDER WAS REMOVED IN NEWER VERSIONS
-  ;;(add-hook 'org-mode-hook
-  ;;(lambda ()
-  ;;(add-hook 'after-save-hook 'my/org-render-latex-fragments nil 'make-the-hook-local)))
+	;;load bullet points
+	(use-package org-bullets
+	:ensure t
+	:config
+	(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-  ;;enable visual line mode to wrap line
-  (global-visual-line-mode 1)
+	;;make formula in latex larger
+	(setq org-format-latex-options (plist-put org-format-latex-options :scale 3.0))
 
-  ;;allow extra shortcut
-  (require 'org-tempo)
+	;;automatically create latex fragment after saving
+	;;(use-package org-fragtog
+	;;:ensure t
+	;;:config
+	;;manually load the file for now
+	(load-file "~/.emacs.d/org-fragtog/org-fragtog.el")
+	(add-hook 'org-mode-hook 'org-fragtog-mode)
+
+
+	;;THIS RENDER WAS REMOVED IN NEWER VERSIONS
+	;;(add-hook 'org-mode-hook
+	;;(lambda ()
+	;;(add-hook 'after-save-hook 'my/org-render-latex-fragments nil 'make-the-hook-local)))
+
+	;;enable visual line mode to wrap line
+	(global-visual-line-mode 1)
+
+	;;allow extra shortcut
+	(require 'org-tempo)
 
   #+END_SRC 
 ** org refs
