@@ -772,8 +772,11 @@ TODO: make a personal folder with needed snippets
 
 #+BEGIN_SRC emacs-lisp
 
-;;load mode for the periodic table
-(load-file "~/.emacs.d/eperiodic.el")
+  ;;load mode for the periodic table
+  (load-file "~/.emacs.d/eperiodic.el")
+
+  ;;good scroll
+  (good-scroll-mode 1)
 
 #+END_SRC
 
