@@ -25,6 +25,7 @@ export EDITOR="emacs -nw -q"
   PCPOSETH5=edepero@pcposeth5.dhcp.phys.ethz.ch
   ESSOSHOST=deperoe@essos1.ethz.ch
   ESSOSSTORAGE=/mnt/storage/deperoe/visible-mode-2021
+  IDATA=/mnt/raid/groups/na64-invisible-mode/invisible-mode-2021/simulation/
   TMSTORAGE=/mnt/raid/groups/muon-mode-2021/true-muonium/simulation-data/reco
   ESSOS=$ESSOSHOST:$TMSTORAGE
   MMCLUSDIR=$ESSOS:/mnt/raid/groups/mm-clustering/data
