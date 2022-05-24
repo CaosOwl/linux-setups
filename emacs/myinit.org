@@ -103,14 +103,16 @@
   #+END_SRC
 * speedbar
   #+BEGIN_SRC emacs-lisp
-  ;;make speedbar appear in the same window
-  ;;(require 'sr-speedbar)
-  (setq
-  ;; skip speedbar when typing C-x o
-  sr-speedbar-skip-other-window-p t
-  )
-  ;;remap speedbar to key binding
-  (global-set-key (kbd "C-x p") 'sr-speedbar-toggle)
+      ;;make speedbar appear in the same window
+      ;;(require 'sr-speedbar)
+      (setq
+      ;; skip speedbar when typing C-x o
+      sr-speedbar-skip-other-window-p t
+      )
+      ;;remap speedbar to key binding
+      (global-set-key (kbd "C-x p") 'sr-speedbar-toggle)
+    ;;increase width of speebar
+  (setq sr-speedbar-width-x 50)
   #+END_SRC 
 * COMMENT auto complete
   #+begin_src emacs-lisp
@@ -559,7 +561,7 @@ TODO: make a personal folder with needed snippets
 
   ;;set tab width
   ;(defvaralias 'c-basic-offset 'tab-width) ;;same as tab width
-  (setq c-basic-offset 1)
+  (setq c-basic-offset 2)
   #+END_SRC 
 ** snippets
    #+BEGIN_SRC emacs-lisp
@@ -778,6 +780,9 @@ TODO: make a personal folder with needed snippets
   ;;good scroll
   (good-scroll-mode 1)
 
-#+END_SRC
+  ;;vterm shortcut
+  (global-set-key (kbd "M-s M-s") 'vterm)
+
+#+end_SRC
 
 

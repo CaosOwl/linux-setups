@@ -1,9 +1,14 @@
 total 0
-drwxr-xr-x. 1 root root 4300 Feb 15 10:55 zoom
-drwxr-xr-x. 1 root root   26 Feb 15 11:33 root
-drwxr-xr-x. 1 root root   76 Feb 16 16:10 geant4
-drwxr-xr-x. 1 root root   64 Feb 16 16:43 clhep
-drwxr-xr-x. 1 root root  122 Feb 16 16:48 xerces
-drwxr-xr-x. 1 root root   54 Feb 18 18:12 cutegram
-drwxr-xr-x. 1 root root   20 Mar  3 16:41 cisco
-drwxr-xr-x. 1 root root   44 Mar 12 15:56 TDLib
+drwxr-xr-x. 1 root root   76 Feb 16  2021 geant4
+drwxr-xr-x. 1 root root   64 Feb 16  2021 clhep
+drwxr-xr-x. 1 root root  122 Feb 16  2021 xerces
+drwxr-xr-x. 1 root root   54 Feb 18  2021 cutegram
+drwxr-xr-x. 1 root root   20 Mar  3  2021 cisco
+drwxr-xr-x. 1 root root   44 Mar 12  2021 TDLib
+drwxr-xr-x. 1 root root   26 Apr 26  2021 Wolfram
+drwxr-xr-x. 1 root root  190 Apr 26  2021 Mathematica
+drwxr-xr-x. 1 root root  128 May  5  2021 WebPlotDigitizer
+drwxr-xr-x. 1 root root   64 Jun  1  2021 root
+drwxr-xr-x. 1 root root  638 Jul 12  2021 Mattermost
+drwxr-xr-x. 1 root root 4604 Aug 23  2021 zoom
+drwxr-xr-x. 1 root root   10 Dec  6 00:44 brave.com
